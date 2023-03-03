@@ -7,6 +7,17 @@ public class Met {
     private String nomMet;
     private List<Recette> recettes;
 
+
+
+    public Met(int idMet) {
+        this.idMet = idMet;
+    }
+
+    public Met(int idMet, String nomMet) {
+        this.idMet = idMet;
+        this.nomMet = nomMet;
+    }
+
     public Met(int idMet, String nomMet, List<Recette> recettes) {
         this.idMet = idMet;
         this.nomMet = nomMet;
@@ -39,5 +50,14 @@ public class Met {
 
     public void setRecettes(List<Recette> recettes) {
         this.recettes = recettes;
+    }
+
+    @Override
+    public String toString() {
+        return "Met{" +
+                "idMet=" + idMet +
+                ", nomMet='" + nomMet + '\'' +
+                ", recettes=" + recettes +
+                '}';
     }
 }

@@ -1,5 +1,10 @@
 package carnet_recettes.dal;
 
-public interface RecetteDAO {
+import carnet_recettes.bo.Met;
 
+import java.util.List;
+
+public interface RecetteDAO {
+    public List<Met> selectAllMet();
+    public Met selectRecetteByMet(int idMets);
 }
