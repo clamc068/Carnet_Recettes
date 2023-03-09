@@ -1,7 +1,11 @@
 package carnet_recettes.servlet;
 
 import java.io.*;
+import java.util.List;
 
+import carnet_recettes.bll.RecetteManager;
+import carnet_recettes.bo.Recette;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -21,6 +25,19 @@ public class HelloServlet extends HttpServlet {
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
         out.println("</body></html>");
+
+        System.out.println("HelloServlet DoGet");
+        int idMet=4;
+
+        List<Recette> recetteTest= RecetteManager.getInstance().selectRecettesByMet(idMet);
+        System.out.println(recetteTest);
+        request.setAttribute("RecetteTest", recetteTest);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        super.doPost(req, resp);
     }
 
     public void destroy() {

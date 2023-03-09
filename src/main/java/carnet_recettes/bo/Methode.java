@@ -1,12 +1,13 @@
 package carnet_recettes.bo;
 
 import java.util.Enumeration;
+import java.util.List;
 
 public class Methode {
     private int idMethode;
     private int numMethode;
     private String texte;
-    Recette recette;
+    List<Recette> recettes;
 
     public Methode(int idMethode, int numMethode, String texte, Recette recette) {
         this.idMethode = idMethode;
@@ -19,12 +20,12 @@ public class Methode {
         this.texte = texte;
     }
 
-    public Recette getRecette() {
-        return recette;
+    public List<Recette> getRecettes() {
+        return recettes;
     }
 
-    public void setRecette(Recette recette) {
-        this.recette = recette;
+    public void setRecettes(List<Recette> recettes) {
+        this.recettes = recettes;
     }
 
     public String getTexte() {
