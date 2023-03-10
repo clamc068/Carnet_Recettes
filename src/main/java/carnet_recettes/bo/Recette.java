@@ -17,10 +17,17 @@ public class Recette {
         this.nomRecette = nomRecette;
     }
 
-    public Recette(String nomRecette, List<Methode> methode, Met met) {
-        this.nomRecette = nomRecette;
-        this.methode = methode;
+    public Recette() {
+
+    }
+
+    public Recette(String nomRecette, List<Ingredient> ingredients,List<Mesure> mesures, List<Methode> methode, Met met) {
         this.met = met;
+        this.nomRecette = nomRecette;
+        this.ingredients = ingredients;
+        this.mesures=mesures;
+        this.methode = methode;
+
     }
 
     public int getIdRecette() {

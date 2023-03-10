@@ -8,4 +8,5 @@ import java.util.List;
 public interface RecetteDAO {
     public List<Met> selectAllMet();
     public List<Recette> selectRecettesByMet(int idMet);
+    public Recette selectRecetteByName(String nom);
 }
